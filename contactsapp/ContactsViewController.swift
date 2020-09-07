@@ -70,6 +70,30 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
         let alertController = UIAlertController(title: "Create New Contact", message: nil, preferredStyle: .alert)
         
         
+        
+        ///Creating the alert controller textfields
+        
+        
+    alertController.addTextField { (nameTextField) in
+            
+        nameTextField.placeholder = "Name"
+        
+        }
+        
+        
+        
+    alertController.addTextField { (surnameTextField) in
+        surnameTextField.placeholder = "Surname"
+    }
+        
+        
+        
+        alertController.addTextField { (phoneNumberTextField) in
+            phoneNumberTextField.placeholder = "Phone"
+            phoneNumberTextField.keyboardType = .numberPad
+          }
+        
+        
         ///Save and Cancel Actions
         
         let saveButton = UIAlertAction(title: "Save", style: .default) { (action) in
